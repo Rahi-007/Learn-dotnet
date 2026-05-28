@@ -1,36 +1,19 @@
 ﻿using System;
-using System.Globalization;
-class Program {
-    public static void Main(string[] args)
+class Program
+{
+    public static void Main()
     {
-    double num1;
-    double num3;
-    double num2;
-    double result;
+        double value, value2;
+        bool result;
 
-    Console.Write("Enter 1st number ");
-    num1 = Convert.ToDouble(Console.ReadLine());
-    Console.Write("Enter 2nd number ");
-    num2 = Convert.ToDouble(Console.ReadLine());
-    Console.Write("Enter 3rd number ");
-    num3 = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Compare 2 numbers");
+        Console.Write("Enter The 1st number");
+        value = Convert.ToDouble(Console.ReadLine());
 
-    result = num1 + num2 + num3;
-    Console.WriteLine($"Addition of three number {num1} + {num2} + {num3} = {result:F6}");
+        Console.Write("Enter The 2nd number");
+        value2 = Convert.ToDouble(Console.ReadLine());
 
-    result = num1 - num2 - num3;
-    Console.WriteLine($"Subtraction of three number {num1} - {num2} - {num3} = {result:F6}");
-
-    result = num1 * num2 * num3;
-    Console.WriteLine($"Multiplication of three number {num1} * {num2} * {num3} = {result:F6}");
-
-    result = num1 / num2 / num3;
-    Console.WriteLine($"Division of three number {num1} / {num2} / {num3} = {result:F6}");
-
-    result = num1 % num2 % num3;
-    Console.WriteLine($"Remainder of three number {num1} % {num2} % {num3} = {result:F6}");
-
-    result = (num1 + num2 + num3) / 3;
-    Console.WriteLine($"Average of three number {num1} % {num2} % {num3} = {result:F6}");
+        result = value >= value2;
+        Console.WriteLine($"{value} >= {value2} = {value >= value2}");
     }
 }
