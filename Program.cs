@@ -1,19 +1,45 @@
 ﻿using System;
 class Program
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
-        double value, value2;
-        bool result;
+        double mark;
 
-        Console.WriteLine("Compare 2 numbers");
-        Console.Write("Enter The 1st number");
-        value = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Enter Your Mark: ");
+        mark = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Enter The 2nd number");
-        value2 = Convert.ToDouble(Console.ReadLine());
-
-        result = value >= value2;
-        Console.WriteLine($"{value} >= {value2} = {value >= value2}");
+        if (mark > 0 && mark < 100)
+        {
+            char grade;
+            if (mark >= 90)
+            {
+                grade = 'A';
+            }
+            else if (mark >= 80)
+            {
+                grade = 'B';
+            }
+            else if (mark >= 70)
+            {
+                grade = 'C';
+            }
+            else if (mark >= 60)
+            {
+                grade = 'D';
+            }
+            else if (mark >= 50)
+            {
+                grade = 'E';
+            }
+            else
+            {
+                grade = 'F';
+            }
+            Console.WriteLine($"You got {grade}");
+        }
+        else
+        {
+            Console.WriteLine($"{mark} is Invalid");
+        }
     }
 }
